@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-exmaple
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-exmaple
+  template:
+    metadata:
+      labels:
+        app: node-exmaple
+    spec:
+      containers:
+      - name: node-exmaple
+        image: 'faizanmomin2508/cloudethix_hpa_faizan:v1'
+        resources:
+          limits:
+            memory: "500Mi"
+            cpu: "0.25m"
+        ports:
+        - containerPort: 3000
+

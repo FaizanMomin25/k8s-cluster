@@ -4,6 +4,7 @@
 
 variable "cluster_name" {
   type        = string
+  default     = "master-node"
   description = "Name of the Kubernetes cluster to create. This name will be used in the names and tags of the created AWS resources and for the local kubeconfig file."
 }
 
